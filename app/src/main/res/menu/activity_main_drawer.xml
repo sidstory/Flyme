@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:checkableBehavior="single">
+        <item android:icon="@drawable/ic_settings_black"
+            android:id="@+id/menu_setting"
+            android:title="应用设置"/>
+        <item android:icon="@drawable/ic_host"
+            android:id="@+id/menu_host"
+            android:title="host净化"/>
+        <item
+        android:icon="@drawable/ic_about"
+        android:id="@+id/menu_about"
+        android:title="关于应用"/>
+        <item
+            android:icon="@drawable/ic_feedback"
+            android:id="@+id/menu_donate"
+            android:title="反馈建议"/>
+    </group>
+</menu>

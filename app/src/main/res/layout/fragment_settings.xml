@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="@string/main_text_system"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/roundcorner"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="@string/main_meizupay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_meizupay"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/roundcorner"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="@string/main_root_updata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_root_updata"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/roundcorner"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="@string/main_safer_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_safer_check"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/roundcorner"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="@string/main_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_search"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/roundcorner"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="@string/main_replace_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_replace_setting"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/roundcorner"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="@string/main_unlock_anyway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_unlock"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/roundcorner"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="@string/main_game_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_game"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/roundcorner"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="@string/main_browser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_browser"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </RelativeLayout>
+            <TextView
+                android:text="@string/main_text_other"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                />
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/roundcorner"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="@string/main_taobao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_taobao"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
