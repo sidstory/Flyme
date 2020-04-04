@@ -20,16 +20,17 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceF
 -keep class cn.sidstory.flyme.xposed.Hook
+-keep class cn.sidstory.flyme.util.Tips{
+private boolean isModuleActive();
+}
 -keep class com.**
 -keep class org.**
 -keep class de.**
--keep class cn.bmob.**
--keep class androidx.**
--keep class io.**
+-keep class androidx.**{*;}
 -keep class **.R$* {*;}
 -keepattributes *Annotation*,InnerClasses
 -dontpreverify
--optimizationpasses 2
+-optimizationpasses 9
 -keep class * implements android.os.Parcelable {
     public static final android.os.Parcelable$Creator *;
 }
@@ -49,32 +50,7 @@
     void *(**On*Event);
     void *(**On*Listener);
 }
- -dontwarn org.codehaus.jackson.**
- -dontwarn com.fasterxml.jackson.databind.**
- -keep class org.codehaus.jackson.** { *;}
- -keep class com.fasterxml.jackson.** { *; }
-# RxJava RxAndroid
--dontwarn sun.misc.**
--keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {
-    long producerIndex;
-    long consumerIndex;
-}
--keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef {
-    rx.internal.util.atomic.LinkedQueueNode producerNode;
-}
--keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef {
-    rx.internal.util.atomic.LinkedQueueNode consumerNode;
-}
--dontnote rx.internal.util.PlatformDependent
-# OkHttp
--dontwarn okio.**
--dontwarn okhttp3.**
--dontwarn javax.annotation.Nullable
--dontwarn javax.annotation.ParametersAreNonnullByDefault
+-verbose
+-ignorewarnings
 
 
-# Okio
--dontwarn com.squareup.**
--dontwarn okio.**
--keep public class org.codehaus.* { *; }
--keep public class java.nio.* { *; }

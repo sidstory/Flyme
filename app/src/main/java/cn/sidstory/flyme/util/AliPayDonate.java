@@ -8,14 +8,8 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.service.quicksettings.TileService;
-import android.util.Base64;
 
-import java.io.File;
 import java.net.URISyntaxException;
-
-import de.robv.android.xposed.XSharedPreferences;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
 
 
 public class AliPayDonate {
@@ -34,7 +28,6 @@ public class AliPayDonate {
      * 这个方法最好，但在 2016 年 8 月发现新用户可能无法使用
      *
      * @param activity Parent Activity
-     * @param urlCode 手动解析二维码获得地址中的参数，例如 https://qr.alipay.com/aehvyvf4taua18zo6e 最后那段
      * @return 是否成功调用
      */
     public static boolean startAlipayClient(Activity activity, String payCode) {

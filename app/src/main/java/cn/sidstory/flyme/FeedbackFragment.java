@@ -3,6 +3,7 @@ package cn.sidstory.flyme;
 import android.Manifest;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
@@ -14,15 +15,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+
 import com.google.android.material.snackbar.Snackbar;
-import com.hjq.permissions.OnPermission;
-import com.hjq.permissions.XXPermissions;
 
 import java.io.File;
 import java.io.InputStream;
-import java.util.List;
 
-import androidx.fragment.app.Fragment;
 import cn.sidstory.flyme.util.AliPayDonate;
 import cn.sidstory.flyme.util.WeiXinDonate;
 
@@ -32,6 +32,8 @@ public class FeedbackFragment extends Fragment implements View.OnClickListener {
     View view=null;
     ImageView alipay=null;
     ImageView weixinpay=null;
+    static String msg;
+    static String conntect;
     @Override
     public View onCreateView( LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.fragment_feedback,container,false);
@@ -70,21 +72,19 @@ public class FeedbackFragment extends Fragment implements View.OnClickListener {
             }
             case R.id.img_weixinpay:
             {
-                if (!XXPermissions.isHasPermission(context, Manifest.permission_group.STORAGE))
+                if (ContextCompat.checkSelfPermission(getContext(),Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED)
                 {
-                    XXPermissions.with(getActivity()).permission(Manifest.permission.WRITE_EXTERNAL_STORAGE).permission(Manifest.permission.READ_EXTERNAL_STORAGE).request(new OnPermission() {
-                        @Override
-                        public void hasPermission(List<String> granted, boolean isAll) {
-                            donateWechat();
-                            Toast.makeText(context, "微信二维码已保存到本地，请选择从相册扫码", Toast.LENGTH_SHORT).show();
-                        }
+                    Toast.makeText(getContext(), "微信支付需要把二维码保存在本地，请授予权限", Toast.LENGTH_SHORT).show();
 
-                        @Override
-                        public void noPermission(List<String> denied, boolean quick) {
-                            Toast.makeText(context, "微信支付需要把二维码保存在本地，请授予权限", Toast.LENGTH_SHORT).show();
+
                         }
-                    });
+                else {
+                    donateWechat();
+                    Toast.makeText(context, "微信二维码已保存到本地，请选择从相册扫码", Toast.LENGTH_SHORT).show();
                 }
+
+
+
 
             }
         }
@@ -107,7 +107,5 @@ public class FeedbackFragment extends Fragment implements View.OnClickListener {
         WeiXinDonate.saveDonateQrImage2SDCard(stringBuilder2, BitmapFactory.decodeStream(openRawResource));
         WeiXinDonate.donateViaWeiXin(getActivity(), stringBuilder2);
     }
-
-
 
 }

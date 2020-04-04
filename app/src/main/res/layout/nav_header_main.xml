@@ -31,6 +31,6 @@
         android:textColor="#000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="让魅族更为好用"/>
+        android:text="让Flyme8更为好用"/>
 
 </LinearLayout>

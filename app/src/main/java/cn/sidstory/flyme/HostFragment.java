@@ -10,10 +10,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
-
-import com.coder.zzq.smartshow.toast.SmartToast;
 import com.google.android.material.snackbar.Snackbar;
 import com.suke.widget.SwitchButton;
 
@@ -146,7 +145,8 @@ public class HostFragment extends Fragment implements SwitchButton.OnCheckedChan
                 if (integer==0){
                     rebootTips();
                 }
-                else SmartToast.fail("获取权限失败，设置不会生效");
+                else
+                Toast.makeText(getContext(), "获取权限失败，设置不会生效", Toast.LENGTH_SHORT).show();
 
 
             }

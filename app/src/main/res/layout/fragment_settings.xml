@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="#ffffff"
     android:layout_height="match_parent">
     <ScrollView
         android:layout_width="match_parent"
@@ -10,85 +12,11 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
-                android:text="@string/main_text_system"
-                android:textSize="15sp"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"/>
-            <RelativeLayout
-                android:layout_margin="10dp"
-                android:background="@drawable/roundcorner"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-                <TextView
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="#000000"
-                    android:text="@string/main_meizupay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
 
-                <com.suke.widget.SwitchButton
-                    android:id="@+id/switch_meizupay"
-                    android:layout_marginRight="10dp"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" />
-            </RelativeLayout>
             <RelativeLayout
+                android:clickable="true"
+                android:background="@drawable/submit_button"
                 android:layout_margin="10dp"
-                android:background="@drawable/roundcorner"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-                <TextView
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="#000000"
-                    android:text="@string/main_root_updata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <com.suke.widget.SwitchButton
-                    android:id="@+id/switch_root_updata"
-                    android:layout_marginRight="10dp"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_margin="10dp"
-                android:background="@drawable/roundcorner"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-                <TextView
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="#000000"
-                    android:text="@string/main_safer_check"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <com.suke.widget.SwitchButton
-                    android:id="@+id/switch_safer_check"
-                    android:layout_marginRight="10dp"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_margin="10dp"
-                android:background="@drawable/roundcorner"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
@@ -106,13 +34,16 @@
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
+                    app:sb_checked_color="#1f7ffb"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right" />
             </RelativeLayout>
 
             <RelativeLayout
+                android:visibility="gone"
+                android:clickable="true"
+                android:background="@drawable/submit_button"
                 android:layout_margin="10dp"
-                android:background="@drawable/roundcorner"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
@@ -129,13 +60,15 @@
                     android:layout_marginRight="10dp"
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
+                    app:sb_checked_color="#1f7ffb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right" />
             </RelativeLayout>
             <RelativeLayout
+                android:clickable="true"
+                android:background="@drawable/submit_button"
                 android:layout_margin="10dp"
-                android:background="@drawable/roundcorner"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
@@ -153,12 +86,14 @@
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
+                    app:sb_checked_color="#FFB6C1"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right" />
             </RelativeLayout>
             <RelativeLayout
+                android:clickable="true"
+                android:background="@drawable/submit_button"
                 android:layout_margin="10dp"
-                android:background="@drawable/roundcorner"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
@@ -172,6 +107,7 @@
 
                 <com.suke.widget.SwitchButton
                     android:id="@+id/switch_game"
+                    app:sb_checked_color="#FFA07A"
                     android:layout_marginRight="10dp"
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
@@ -180,8 +116,9 @@
                     android:layout_gravity="right" />
             </RelativeLayout>
             <RelativeLayout
+                android:clickable="true"
+                android:background="@drawable/submit_button"
                 android:layout_margin="10dp"
-                android:background="@drawable/roundcorner"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
@@ -196,22 +133,17 @@
                 <com.suke.widget.SwitchButton
                     android:id="@+id/switch_browser"
                     android:layout_marginRight="10dp"
+                    app:sb_checked_color="#778899"
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right" />
             </RelativeLayout>
-            <TextView
-                android:text="@string/main_text_other"
-                android:textSize="15sp"
-                android:paddingLeft="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                />
             <RelativeLayout
+                android:clickable="true"
+                android:background="@drawable/submit_button"
                 android:layout_margin="10dp"
-                android:background="@drawable/roundcorner"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
@@ -219,13 +151,39 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:textColor="#000000"
-                    android:text="@string/main_taobao"
+                    android:text="@string/main_quick"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <com.suke.widget.SwitchButton
-                    android:id="@+id/switch_taobao"
+                    android:id="@+id/switch_quick"
                     android:layout_marginRight="10dp"
+                    app:sb_checked_color="#FFD700"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:clickable="true"
+                android:background="@drawable/submit_button"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="@string/main_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_qq"
+                    android:layout_marginRight="10dp"
+                    app:sb_checked_color="#40E0D0"
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"

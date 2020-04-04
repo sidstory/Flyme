@@ -8,12 +8,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
-import android.widget.Switch;
+
+import androidx.fragment.app.Fragment;
 
 import com.suke.widget.SwitchButton;
 
-import androidx.fragment.app.Fragment;
 import cn.sidstory.flyme.util.Tips;
 
 
@@ -33,6 +32,7 @@ public class AppSettingFragment extends Fragment implements SwitchButton.OnCheck
         editor=sharedPreferences.edit();
         switch_setting_check = view.findViewById(R.id.switch_appsetting_check);
         switch_setting_hideicon = view.findViewById(R.id.switch_appsetting_hideicon);
+
         initData();
         switch_setting_hideicon.setOnCheckedChangeListener(this);
         switch_setting_check.setOnCheckedChangeListener(this);
@@ -82,5 +82,10 @@ public class AppSettingFragment extends Fragment implements SwitchButton.OnCheck
             hideIcon(isChecked);
             //getActivity().finish();
         }
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
     }
 }

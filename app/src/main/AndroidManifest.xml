@@ -11,14 +11,9 @@
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon"
-        android:name=".util.MyApplication"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <provider
-            android:name="cn.bmob.v3.util.BmobContentProvider"
-            android:authorities="cn.sidstory.flyme.BmobContentProvider">
-        </provider>
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="cn.sidstory.flyme"
@@ -29,10 +24,6 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity
-            android:name="cn.bmob.v3.update.UpdateDialogActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-        </activity>
         <activity
             android:name=".SplashActivity"
             android:launchMode="singleTask"
@@ -62,7 +53,7 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="让魅族更为好用 design by smice" />
+            android:value="让flyme更为好用 design by smice" />
         <meta-data
             android:name="xposedminversion"
             android:value="82" />

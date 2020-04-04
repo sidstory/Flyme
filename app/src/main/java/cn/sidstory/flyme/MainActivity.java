@@ -1,32 +1,30 @@
 package cn.sidstory.flyme;
 
 import android.Manifest;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.graphics.drawable.DrawerArrowDrawable;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
-
-import com.coder.zzq.smartshow.toast.SmartToast;
 import com.githang.statusbar.StatusBarCompat;
 import com.google.android.material.navigation.NavigationView;
-import com.hjq.permissions.OnPermission;
-import com.hjq.permissions.XXPermissions;
 
-import java.util.List;
-
-import cn.bmob.v3.update.BmobUpdateAgent;
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     FragmentManager manager = getSupportFragmentManager();
     private Long firstpress = new Long(0);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,25 +41,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawable.setColor(Color.BLACK);
         toggle.setDrawerArrowDrawable(drawable);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        if (!XXPermissions.isHasPermission(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.REQUEST_INSTALL_PACKAGES, Manifest.permission.ACCESS_NETWORK_STATE})) {
-            XXPermissions.with(this).permission(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.REQUEST_INSTALL_PACKAGES, Manifest.permission.ACCESS_NETWORK_STATE).request(new OnPermission() {
-                @Override
-                public void hasPermission(List<String> granted, boolean isAll) {
-
-                }
-
-                @Override
-                public void noPermission(List<String> denied, boolean quick) {
-                    SmartToast.error("您未授权权限，软件无法正常运行");
-                }
-            });
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
         }
-        ;
-        BmobUpdateAgent.setUpdateOnlyWifi(false);
-        BmobUpdateAgent.update(this);
+        File file=new File(Environment.getExternalStorageDirectory().getPath()+"/flymetool");
+        if (!file.exists()){
+            file.mkdirs();
+        }
     }
 
     @Override
@@ -69,22 +57,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else if (this.getTitle().equals("魅工具")) {
+        } else if (this.getTitle().equals("魅族净化")) {
 
             Long presentpress = System.currentTimeMillis();
             if ((presentpress - firstpress) < 2000) {
                 finish();
             } else {
-                SmartToast.show("再次按下退出");
+                Toast.makeText(this, "再次按下退出", Toast.LENGTH_SHORT).show();
                 firstpress = presentpress;
             }
 
         } else
             manager.beginTransaction().replace(R.id.setting_fragment, new SettingFragment()).commit();
+
     }
 
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.

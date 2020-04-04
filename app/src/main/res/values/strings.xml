@@ -1,38 +1,21 @@
 <resources>
-    <string name="app_name">魅工具</string>
-    <string name="app_version">1.3</string>
+    <string name="app_name">魅族净化</string>
+    <string name="app_version">2.0(适配8.0A)</string>
     <string name="author">smice</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-    <string name="main_text_system">系统应用</string>
-    <string name="main_theme"><b>主题净化</b>\n去除详情页广告</string>
-    <string name="main_music"><b>音乐净化</b>\n去除"我的"界面、播放界面广告</string>
-    <string name="main_updata"><b>Root更新</b>\nroot后也能ota更新</string>
-    <string name="main_meizupay"><b>MeizuPay</b>\nRoot也能正常使用</string>
-    <string name="main_text_xiaomi">小米应用</string>
-    <string name="main_xiaomifit"><b>小米运动</b>\n去除启动页、发现</string>
-    <string name="main_text_aliapp">阿里应用</string>
-    <string name="main_taobao"><b>淘宝修复</b>\n修复xposed导致的闪退</string>
-    <string name="main_safer_check"><b>安全检查</b>\n禁用安全检查，加快安装速度</string>
-    <string name="main_antEnergy"><b>蚂蚁森林</b>\n进入蚂蚁森林自动收取能量</string>
-    <string name="main_text_other">其他应用</string>
-    <string name="main_root_updata"><b>Root更新</b>\nRoot后也能ota更新</string>
     <string name="main_replace_setting"><b>下拉编辑优化</b>\n通知栏快捷替换增加长按进入设置</string>
     <string name="main_browser"><b>浏览器优化</b>\n去除资讯页，焕然一新的感觉</string>
     <string name="main_unlock_anyway"><b>开机指纹解锁</b>\n开机第一次解锁也能用指纹</string>
     <string name="main_search"><b>禁用上滑搜索</b>\n去除多余手势，防止手滑</string>
-    <string name="main_qq"><b>QQ净化</b>\n去除大部分无用功能</string>
-    <string name="main_text_baidu">百度应用</string>
-    <string name="main_baidudisk"><b>百度网盘</b>\n去除启动页、发现、我的界面广告</string>
-    <string name="main_game_mode"><b>游戏模式优化</b>\n隐藏游戏模式福利</string>
-    <string name="donate">开发不易，如果您觉得魅有灵犀对您有用，可以通过下面的捐赠方式捐赠来帮助软件能持续更新。</string>v
-    <string name="about_app">魅工具适用于flyme7，但不局限于flyme，还包含其他第三方常用软件。魅工具功能实现依赖xposed以及root权限，此外设置需要退出后才能生效，魅工具申请的网络权限仅用于更新检查，所以您不用担心魅工具会窃取您的隐私。</string>
+    <string name="main_quick"><b>快应用净化</b>\n去除快应用右上角菜单中的广告</string>
+    <string name="main_qq"><b>QQ小程序净化</b>\n去除对话界面下拉小程序</string>
+    <string name="main_game_mode"><b>游戏模式优化</b>\nFlyme7隐藏游戏模式福利</string>
+    <string name="donate">开发不易，如果您觉得APP对您有用，可以通过下面的捐赠方式捐赠来帮助软件能持续更新。</string>v
+    <string name="about_app">魅族净化适用于flyme7、8，但不局限于flyme，还包含其他第三方常用软件。功能实现依赖xposed以及root权限，APP申请的网络权限仅用于更新检查，所以您不用担心会窃取您的隐私。</string>
     <string name="thanks_to_opensource">致谢以下开源项目\nflyme6helper\nhttps://github.com/coderstory/flyme6helper\nyhosts\nhttps://github.com/vokins/yhosts\n</string>
-    <string name="feedback">邮箱:smice_h@qq.com(长按复制)\n博客:<a href="http://sidstory.cn">sidstory.cn</a>\n如果您有好的建议或者软件有bug需要修复，为保证能及时收到反馈，请通过邮箱反馈。</string>
+    <string name="feedback">邮箱:smice_h@qq.com(长按复制)\n博客:<a href="http://sidstory.cn">sidstory.cn</a>\n为保证能及时收到反馈，请通过邮箱反馈。</string>
     <string name="app_setting_check"><b>xposed检测</b>\n开启后如果此模块未激活则弹出提示</string>
     <string name="app_setting_hideicon"><b>隐藏图标</b>\n隐藏桌面图标，可以从xposed进入</string>
     <string name="host"><b>Host净化</b>\n屏蔽互联网网页广告</string>

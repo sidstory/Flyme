@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:aapt="http://schemas.android.com/aapt"
     android:orientation="vertical"
-    android:background="#f5f5f5"
+    android:background="#ffffff"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
@@ -27,6 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/author"/>
+
             <TextView
                 android:id="@+id/feedback_content"
                 android:background="@drawable/roundcorner"

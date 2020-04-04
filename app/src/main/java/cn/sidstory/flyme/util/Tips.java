@@ -31,15 +31,18 @@ public class Tips {
     }
 
 
-    private boolean isModuleActive() {
+    private boolean isModuleActive(){
         return false;
     }
 
+
     public static void KillUtil(final String string) {
-               CommandExecution.execCommand("a" + "m force-stop " + string, true);
-
-
-
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                CommandExecution.execCommand("a" + "m force-stop " + string, true);
+            }
+        }).start();
 
     }
 }
